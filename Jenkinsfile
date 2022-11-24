@@ -12,10 +12,16 @@ pipeline {
                 sh "./Division.py"
             }
         }
-        stage('Test Code') {
+        stage('Pass Test Code') {
             steps {
-                sh "chmod u+x Test.py"
-                sh "./Test.py"
+                sh "chmod u+x PassTestCases.py"
+                sh "./PassTestCases.py"
+            }
+        }
+        stage('Fail Test Code') {
+            steps {
+                sh "chmod u+x FailTestCases.py"
+                sh "./FailTestCases.py"
             }
         }
     } 
