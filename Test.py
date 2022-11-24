@@ -3,7 +3,13 @@ import unittest
 
 from Division import divide
 
-class Tests(unittest.TestCase):    
+class Tests(unittest.TestCase): 
+    def fail_test_case_1(self):
+        a = 10
+        b = 0
+        
+        result = divide(a, b)
+       
     def pass_test_case_1(self):
         a = 10
         b = 5
